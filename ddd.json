@@ -1,0 +1,7 @@
+{
+    "host": "192.168.111.231",
+    "user": "root",
+    "password": "Dhdev@4062",
+    "port": "3306",
+    "database": "management"
+}
