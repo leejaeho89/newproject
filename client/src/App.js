@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Customer from './components/Customer'
+import CustomerAdd from './components/CustomerAdd';
 
 import './App.css';
 
@@ -111,13 +112,11 @@ render() {
 const { classes } = this.props;
 
 return (
+<div>
 
 <Paper className={classes.root}>
-
 <Table className={classes.table}>
-
 <TableHead>
-
 <TableRow>
 
 <TableCell>번호</TableCell>
@@ -132,6 +131,8 @@ return (
 
 <TableCell>직업</TableCell>
 
+<TableCell>설정</TableCell>
+
 </TableRow>
 
 </TableHead>
@@ -142,8 +143,7 @@ return (
 
 this.state.customers.map(c => {
 
-return <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} />
-
+return <Customer stateRefresh={this.stateRefresh} key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job} />
 }) :
 
 <TableRow>
@@ -163,6 +163,11 @@ return <Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.
 </Table>
 
 </Paper>
+
+<CustomerAdd/>
+
+</div>
+
 
 );
 
