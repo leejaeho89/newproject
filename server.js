@@ -50,7 +50,7 @@ app.get('/api/customers', (req, res) => {
 
 connection.query(
 
-'SELECT * FROM CUSTOMER',
+'SELECT * FROM CUSTOMER where isDeleted = 0',
 
 (err, rows, fields) => {
 
