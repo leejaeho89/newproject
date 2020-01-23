@@ -124,7 +124,7 @@ handleValueChange(e) {
         this.callApi()
         .then(res => this.setState({customers: res}))
         .catch(err => console.log(err));
-        }
+        }   
 
 componentDidMount() {
 this.timer = setInterval(this.progress, 20);
